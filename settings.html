@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/settings.css">
+    
+</head>
+<body>
+
+
+<div class="DandGscrolledMenu">
+    <form action="/logout" method="get">
+        <div class="closeMenu">
+            <button type="submit">Log out</button>
+        </div>
+    </form>
+
+    <div class="h1Menu">
+        <a href="/">Gamma</a>
+    </div>
+
+
+</div>
+
+<form action="/changedata" method="post">
+    <div class="settings">
+        <div class="human">
+            <h2>Welcome,</h2>
+            <h2 th:text="${user.name}"></h2>
+        </div>
+        <div style="display:flex;justify-content: space-between;width: 90%;flex-direction: column;gap: 10%;margin-left: 5%;">
+            <div class="row1" style="display: flex;flex-direction: row;gap: 10% ">
+                <div class="inputBox3">
+                    <input type="text" placeholder="FIRST NAME" id="firstName" name="name">
+                </div>
+
+                <div class="inputBox3">
+                    <input type="text" placeholder="LAST NAME" id="lastName" name="surname">
+                </div>
+            </div>
+
+            <div class="row2" style="display: flex;flex-direction: row; gap: 10%">
+                <div class="inputBox4">
+                    <input type="email" placeholder="Email" id="email" name="email">
+                </div>
+
+                <div class="inputBox">
+                    <input type="password" placeholder="Password" id="password1" name="password">
+                    <img src="eyeClose1.png" alt="" id="eyeicon1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="loginbtn2Block">
+        <div class="loginbtn2">
+            <button id="myBtn" type="submit"><h2 style="font-size: 20px;">Modify profile</h2></button>
+        </div>
+    </div>
+</form>
+
+
+<div style="display: flex;margin-left: 5%;font-size: 20px;margin-top: 5%;margin-bottom: 5%;">
+    Shopping bag
+</div>
+
+<div class="container">
+    <div class="item" th:each="el : ${products}">
+        <img th:src="${el.image}">
+        <div class="overlay1">
+            <div class="heart"></div>
+
+        </div>
+        <div class="price">
+            <h2 id="one hundred and ten" th:text="${el.name}"></h2>
+        </div>
+        <h2 th:text="'$' + ${el.price}"></h2>
+    </div>
+</div>
+
+<script src="js/settings.js"></script>
+</body>
+</html>

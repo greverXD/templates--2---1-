@@ -1,0 +1,891 @@
+<!DOCTYPE html> 
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link href="css/dolce A.css" rel="stylesheet" />
+<meta charset="utf-8" /> 
+
+ 
+</head> 
+<body> 
+
+
+
+
+ 
+
+
+
+    <div class="overlay" onclick="closeNav('menu')"></div>
+
+
+
+
+
+
+  
+<form th:action="@{/login}" method="post">
+<div id="loginSidebar" class="sidebar">
+    <div class="contentLogin">
+     <div class="log">
+        <h2 id="one">Login</h2>
+    </div>
+         
+         <div class="l">
+
+    <div class="inputBox">
+        <input type="Email" placeholder="Email" id="Email" name="username">
+
+    </div>
+
+    <div class="inputBox">
+        <input type="password" placeholder="Password" id="password" name="password">
+        <img src="https://i.imgur.com/3g2X07N.png" alt="" id="eyeicon">
+    </div>
+
+    </div>
+      
+     <div class="Remember"> <div class="forgot">
+        <h3 id="two"><a>Forgot your password?</a></h3>
+
+     </div>
+     <label class="checkbox" id="three">Remember me
+  <input type="checkbox">
+  <span class="checkmark"></span>
+</label> 
+
+ <div class="loginbtn" id="loginButton">
+    <button><h2 id="one">Login</h2></button>
+ </div>   
+</div>
+</form>
+
+<div class="info">
+    <h3 id="four">CREATE ACCOUNT</h3>
+    <ul>
+        <li id="five">Add your favorite items to your wishlist</li>
+        <li id="six">Save your contact informations for a faster checkout</li>
+        <li id="seven">Check your order status</li>
+    </ul>
+</div> 
+<div class="loginbtn1Block">
+ <div class="loginbtn1" id="loginbtn1">
+    <button><h2 id="four">Create Account</h2></button>
+ </div>
+</div>
+     </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('login')">×</a>
+</div>
+
+
+<div id="searchSidebar" class="sidebar">
+    <div class="contentSearch">
+     <input type="text" id="searchInput" placeholder="Поиск..." style="margin-left:1%">
+<div style="display:flex;gap: 5%;margin-left: 3%;margin-top: 2%;">
+<button class="category" data-category="men">Men</button>
+<button class="category" data-category="women">Women</button>
+<button class="category" data-category="children">Children</button>
+</div>
+
+<div class="container2">
+
+
+    <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">1</div>
+    </div>
+
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">2</div>
+    </div>
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">3</div>
+    </div>
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">4</div>
+    </div>
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">5</div>
+    </div>
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">6</div>
+    </div>
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">7</div>
+    </div>
+
+    <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">8</div>
+
+    </div>
+
+    <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">9</div>
+    </div>
+
+    <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">10</div>
+    </div>
+
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">11</div>
+    </div>
+
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">12</div>
+    </div>
+
+        <div class="item" data-category="men">
+        <img src="b1.png" alt="Товар 1">
+        <div class="item-name">13</div>
+    </div>
+
+    <div class="item" data-category="women">
+        <img src="b1.png" alt="Товар 2">
+        <div class="item-name">товар</div>
+    </div>
+
+        <div class="item" data-category="women">
+        <img src="b1.png" alt="Товар 2">
+        <div class="item-name">товары</div>
+    </div>
+
+
+        <div class="item" data-category="women">
+        <img src="b1.png" alt="Товар 2">
+        <div class="item-name">6</div>
+    </div>
+</div>
+     </div>
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav('search')">×</a>
+</div>
+
+ 
+
+<div id="cartSidebar" class="sidebar" >
+  <div class="bag" style="display:flex;flex-direction:column;margin-left: 7%;">
+    <h2 class="myText">SHOPPING BAG</h2>
+
+<div class="total">Total: <span id="total">0</span>$</div>
+  </div>  
+
+<div style="display:flex;flex-direction: column;">
+<div class="container1" style="margin-bottom: 100px;">
+
+
+
+    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+        <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+
+        <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+
+        <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+
+        <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+
+        <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+
+        <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+
+
+        <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="cartPrice">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <div class="cartPrice">
+    <h2><span class="price">$1.457<span></h2>
+    </div>
+    </div>
+
+           
+
+
+<div class="loginbtn2Block" style="margin-left: 200px;" >
+        <div class="loginbtn2">
+            <button id="myBtn" type="submit"><h2 style="font-size: 20px;">Proceed to payment</h2></button>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+     
+      
+
+ <a href="javascript:void(0)" class="closebtn" onclick="closeNav('cart')">×</a> 
+ </div> 
+
+
+  
+
+
+
+</div>
+<script>
+let total = 0;
+const items = document.querySelectorAll('.item1');
+
+items.forEach((item) => {
+    const priceElement = item.querySelector('.price');
+    const priceText = priceElement.textContent.trim().replace('$', '');
+    const price = parseFloat(priceText);
+    total += price;
+});
+
+const totalElement = document.getElementById('total');
+totalElement.textContent = total.toFixed(3);
+</script>
+<button id="scrollToTopBtn" onclick="scrollToTop()"></button> 
+    <div class="DandGscrolled"> 
+        
+<div class="Login">
+    <div id="main">
+        <button class="openbtn" onclick="openNav('search'); event.stopPropagation()"><p class="myText">Search</p></button>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="window.location.href='/settings'"><p class="myText">Account</p></button>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav('cart'); event.stopPropagation()"><p class="myText">Cart</p></button>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick=" event.stopPropagation()"><p onclick="changeText()" class="myText">EN</p></button>
+    </div>
+
+</div>
+
+        <div class="h1"> 
+        <a href="/">Gamma</a>
+        </div> 
+ 
+         
+
+        <div class="link"> 
+         
+         <a class="women"><p class="myText">women</p></a> 
+         <a class="men"><p class="myText">men</p></a> 
+          
+         <a class="childrenchildren" id="fourteen"><p class="myText">children</p></a>
+        
+        </div> 
+
+    </div>
+
+
+
+      
+    </div>
+
+   
+ 
+ 
+  
+
+
+    <div class="MenuWomenMen">
+
+    <div class="DandGscrolledMenu"> 
+
+        
+        <div class="closeMenu">X</div>
+        <div class="h1Menu"> 
+        <a href="/">Gamma</a>
+        </div> 
+ 
+ 
+        <div class="linkMenu"> 
+
+         <a class="womenMenu" id="twelve"><p class="myText">women</p></a> 
+         
+        </div> 
+
+    </div>
+
+<div class="AllMenu">
+  <div class="menu">
+    <div class="a">
+     <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText" id="myText1">Clothing</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText" id="myText1">Bags</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText" id="myText1">Shoes</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText" id="myText1">Accessories</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText" id="myText1">Sunglasses</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+        <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText" id="myText1">Watches&Jewelry</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+   
+
+  </div>
+
+  <div class="dws-menu1">
+    <div class="dws-menu1Col">
+        <a class="a" id="twenty-one" href="/coats-and-jackets" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Coats and Jackets</span></a>
+        <a class="a" id="twenty-two" href="/denim-and-skirts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText" id="myText1">Denim and Skirts</span></a>
+        <a class="a" id="twenty-three" href="/dresses&blazers" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Dresses&Blazers</span></a>
+        <a class="a" id="twenty-four"href="/shirts-and-tops" data-image="https://i.imgur.com/yjlZjzM.jpg"> <span class="myText"id="myText1">Shirts and Tops</span></a>
+        <a class="a" id="twenty-five" href="/trousers-and-shorts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Shorts</span></a>
+        <a class="a" id="twenty-six" href="/tshirts-and-sweatshirts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">T-Shirts and Sweatshirts</span></a>
+        <a class="a" id="twenty-seven" href="/underwear-and-beachwear" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Underwear and Beachwear</span></a>
+    </div>
+
+  </div>
+
+  <div class="dws-menu2">
+    <div class="dws-menu1Col">
+        <a class="a" id="twenty-eight" href="/clutches-mini-and-micro-bags" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Clutches mini and Micro Bags</span></a>
+        <a class="a" id="twenty-nine"  href="/handbags-and-totes" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Handbags and Totes</span></a>
+        <a class="a" id="thirty"  href="/shoulder-and-crossbody-bags" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Shoulder and Crossbody Bags</span></a>
+        <a class="a" id="thirty-one"  href="/sicily-and-devotion" data-image="/images/coats.jpg"><span class="myText"id="myText1">Sicily and Devotion</span></a>
+    </div>
+    
+  </div>
+
+  <div class="dws-menu3">
+    <div class="dws-menu1Col">
+        <a class="a" id="thirty-two" href="/boots-and-booties" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Boots and Booties</span></a>
+        <a class="a" id="thirty-three" href="/pumps-and-skingback" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Pumps and Skingback</span></a>
+        <a class="a" id="thirty-four" href="/sandals-and-wedges" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Sandals and Wedges</span></a>
+        <a class="a" id="thirty-five" href="/slides-and-mules" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Slides and Mules</span></a>
+        <a class="a" id="thirty-six" href="/sheakers-and-flat" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Sheakers and Flat</span></a>
+    </div>
+   
+  </div>
+
+  <div class="dws-menu4">
+    <div class="dws-menu1Col">
+        <a class="a" id="thirty-seven" href="/bijoux-and-belts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Bijoux and Belts</span></a>
+        <a class="a" id="thirty-eight" href="/hats-and-gloves" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Hats and Gloves</span></a>
+        <a class="a" id="thirty-nine" href="/scarves-and-silks" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Scarves and Silks</span></a>
+        <a class="a" id="forty" href="/socks-and-technology" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Socks and Technology</span></a>
+        <a class="a" id="forty-one" href="/wallets-and-small-leather-goods" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Wallets and small leather goods</span></a>
+    </div>
+    
+  </div>
+
+    <div class="dws-menu5">
+    <div class="dws-menu1Col">
+      <a class="a" id="forty-two" href="/new-arrivals-and-icons" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">New arrivals and Icons</span></a>
+    </div>
+    
+  </div>
+    <div class="dws-menu6">
+    <div class="dws-menu1Col">
+        <a class="a" id="forty-three" href="/earrings-and-rings" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Earrings and Rings</span></a>
+        <a class="a" id="forty-four" href="/neacklaces-and-charms" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Neacklaces and Charms</span></a>
+        <a class="a" id="forty-five" href="/watches&straps" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Watches&Straps</span></a>
+    </div>
+    
+  </div>
+ <div class="png-container" style="display:flex;width: 38vw;height: 100vh; justify-content: center;align-items: center;">
+
+    
+        <img src="" style="width: 100%; height: 100%; object-fit: cover;">
+      
+ </div>   
+
+</div>
+
+
+
+
+
+</div> 
+</div>
+
+
+
+<div class="MenuWomenMen1">
+    <div class="DandGscrolledMenu"> 
+        <div class="closeMenu1">X</div>
+
+        <div class="h1Menu"> 
+        <a href="/">Gamma</a>
+        </div> 
+ 
+ 
+        <div class="linkMenu"> 
+ 
+         <a class="mennMenu" id="seventy-five"><p class="myText">men</p></a> 
+
+        </div> 
+
+    </div>
+
+ <div class="AllMenu1">
+  <div class="menu">
+    <div class="a">
+     <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText"id="myText1">Clothing</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText"id="myText1">Bags</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText"id="myText1">Shoes</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText"id="myText1">Accessories</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText"id="myText1">Sunglasses</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+        <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText"id="myText1">Watches&Jewelry</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+   
+
+  </div>
+
+  <div class="dws-menu1">
+    <div class="dws-menu1Col">
+        <a class="a" id="forty-six" href="/activewear-and-beachwear" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText" id="myText1">Activewear and Beachwear</span></a>
+        <a class="a" id="forty-seven" href="/coats-and-jackets1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Coats and Jackets</span></a>
+        <a class="a" id="forty-eight" href="/denim-and-sweatshirts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Denim and Sweatshirts</p></span></a>
+        <a class="a" id="forty-nine" href="/shirts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Shirts</span></a>
+        <a class="a" id="fifty" href="/suits-and-blazers" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Suits and Blazers</span></a>
+        <a class="a" id="fifty-one" href="/tshirts-and-polos" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">T-Shirts and Polos</span></a>
+        <a class="a" id="fifty-two"  href="/sweaters-and-cardigans" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Sweaters and Cardigans</span></a>
+        <a class="a" id="fifty-three" href="/trousers-and-shorts1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Shorts</span></a>
+        <a class="a" id="fifty-four" href="/underwear-and-loungewear" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Underwear and Loungewear</span></a>
+    </div>
+
+  </div>
+
+  <div class="dws-menu2">
+    <div class="dws-menu1Col">
+        <a class="a" id="fifty-three" href="/backpacks-and-fanny-packs" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Backpacks and Fanny packs</span></a>
+        <a class="a" id="fifty-four" href="/briefcase-and-cluthces" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Briefcase and cluthces</span></a>
+        <a class="a" id="fifty-five" href="/crossbody-bags" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Crossbody Bags</span></a>
+        <a class="a" id="fifty-six" href="/travel-bags-and-shoppers" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Travel bags and Shoppers</span></a>
+        <a class="a" id="fifty-seven" href="/trousers-and-shorts1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Shorts</span></a>
+        <a class="a" id="fifty-eight" href="/underwear-and-loungewear" data-image="https://i.imgur.com/yjlZjzM.jpg"> <span class="myText"id="myText1">Underwear and Loungewear</span></a>
+    </div>
+    
+  </div>
+
+  <div class="dws-menu3">
+    <div class="dws-menu1Col">
+        <a class="a" id="fifty-nine" href="/boots" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Boots</span></a>
+        <a class="a" id="sixty" href="/loafers-and-moccasins" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Loafers and Moccasins</span></a>
+        <a class="a" id="sixty-one" href="/sandals-and-slides" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Sandals and Slides</span></a>
+        <a class="a" id="sixty-two" href="/sheakers-and-lace-ups" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Sheakers and Lace-ups</span></a>
+      
+    </div>
+   
+  </div>
+
+  <div class="dws-menu4">
+    <div class="dws-menu1Col">
+        <a class="a" id="sixty-three" href="/belts-and-bijoux" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Belts and Bijoux</span></a>
+        <a class="a" id="sixty-four" href="/hats-and-gloves1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Hats and Gloves</span></a>
+        <a class="a" id="sixty-five" href="/scarves-and-silks1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Scarves and Silks</span></a>
+        <a class="a" id="sixty-six" href="/socks" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Socks</span></a>
+        <a class="a" id="sixty-seven" href="/wallets-and-small-leather-goods1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Wallets and small leather goods</span></a>
+        <a class="a" id="sixty-eight" href="/ties-and-pocket-squares" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Ties and pocket squares</span></a>
+    </div>
+    
+  </div>
+
+    <div class="dws-menu5">
+    <div class="dws-menu1Col">
+        <a class="a" id="sixty-nine" href="/icons" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Icons</span></a>
+        <a class="a" id="seventy" href="/new-arrivals" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">New arrivals</span></a>
+    </div>
+    
+  </div>
+    <div class="dws-menu6">
+    <div class="dws-menu1Col">
+        <a class="a" id="seventy-one" href="/brooches&tiepins" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Brooches&Tiepins</span></a>
+        <a class="a" id="seventy-two" href="/charms-and-watches" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Charms and watches</span></a>
+        <a class="a" id="seventy-three" href="/cufflinks-and-necklaces" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Cufflinks and necklaces</span></a>
+        <a class="a" id="seventy-four" href="/rings-and-bracelets" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Rings and bracelets</span></a>
+    </div>
+    
+  </div>
+
+ <div class="png-container" style="display:flex;width: 38vw;height: 100vh; justify-content: center;align-items: center;">
+
+    
+        <img src="" style="width: 100%; height: 100%; object-fit: cover;">
+      
+ </div> 
+</div> 
+
+
+</div>
+
+
+
+
+<div class="MenuWomenMen2">
+    <div class="DandGscrolledMenu"> 
+        <div class="closeMenu6">X</div>
+
+        <div class="h1Menu"> 
+        <a href="/">Gamma</a>
+        </div> 
+ 
+ 
+        <div class="linkMenu"> 
+ 
+         <a class="mennMenu" id="seventy-six"><p class="myText">children</p></a> 
+
+        </div> 
+
+    </div>
+
+ <div class="AllMenu2">
+  <div class="menu">
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText" id="myText1">Girl(2-13)</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText"id="myText1">Boy(2-13)</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText"id="myText1">Newborn(0-12 months)</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/qq_XqPKy8yI_.png?updatedAt=1705245850859"><span class="myText"id="myText1">Newborn girl(0-30 months)</span></a>
+        <img class="menu-image" src="" alt="">
+    </div>
+    <div class="a">
+      <a id="fifteen" data-image="https://ik.imagekit.io/uavondnkg/q_Q0f_9dFjz.png?updatedAt=1705245851246"><span class="myText"id="myText1">Newborn boy(0-30 months)</span></a>
+        <img class="menu-image" src="" alt="">
+
+ </div>
+ </div>
+    
+
+  
+
+  <div class="dws-menu1">
+    <div class="dws-menu1Col">
+        <a class="a" id="eighty-two" href="/coats-and-jackets2" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Coats and Jackets</span></a>
+        <a class="a" id="eighty-three" href="/tshirts-and-sweatshirts1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">T-Shirts and Sweatshirts</span></a>
+        <a class="a" id="eighty-four" href="/shirts-and-tops1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Shirts and Tops</span></a>
+        <a class="a" id="eighty-five" href="/trousers-and-skirts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Skirts</span></a>
+        <a class="a" id="eighty-six" href="/dresses-and-sweaters" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Dresses and Sweaters</span></a>
+        <a class="a" id="eighty-seven" href="/beachwear" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Beachwear</span></a>
+        <a class="a" id="eighty-eight" href="/accessories" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Accessories</span></a>
+      
+    </div>
+
+  </div>
+
+  <div class="dws-menu2">
+    <div class="dws-menu1Col">
+        <a class="a" id="eighty-two" href="/coats-and-jackets3" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Coats and Jackets</span></a>
+        <a class="a" id="eighty-three" href="/tshirts-and-sweatshirts2" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">T-Shirts and Sweatshirts</span></a>
+        <a class="a" id="eighty-nine" href="/trousers-and-shorts2" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Shorts</span></a>
+        <a class="a" id="ninety" href="/nightwear-and-underwear" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Nightwear and Underwear</span></a>
+        <a class="a" id="ninety-one" href="/suits-and-shirts" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Suits and Shirts</span></a>
+        <a class="a" id="ninety-two" href="/sweaters" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Sweaters</span></a>
+        <a class="a" id="eighty-seven" href="/beachwear1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Beachwear</span></a>
+        <a class="a" id="eighty-eight"  href="/accessories" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Accessories</span></a>
+    </div>
+    
+  </div>
+
+  <div class="dws-menu3">
+    <div class="dws-menu1Col">
+        <a class="a" id="ninety-three" href="/special-occasions" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Special occasions</span></a>
+        <a class="a" id="ninety-four" href="/accessories-and-baby-carriers" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Accessories and Baby carriers</span></a>
+        <a class="a" id="ninety-five" href="/trousers-and-shorts3" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Shorts</span></a>
+        <a class="a" id="ninety-six" href="/dresses" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Dresses</span></a>
+        <a class="a" id="ninety-seven" href="/topwear" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Topwear</span></a>
+        <a class="a" id="ninety-eight" href="/newborn-shoes" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Newborn shoes</span></a>
+    </div>
+   
+  </div>
+
+  <div class="dws-menu4">
+    <div class="dws-menu1Col">
+
+        <a class="a" id="ninety-nine" href="/accessories-and-baby-carriers1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Accessories and Baby carriers</span></a>
+        <a class="a" id="one hundred" href="/trousers-and-shorts4" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Shorts</span></a>
+        <a class="a" id="one hundred and one" href="/dresses" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Dresses</span></a>
+        <a class="a" id="one hundred and two" href="/topwear-and-beachwear" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Topwear and Beachwear</span></a>
+        <a class="a" id="one hundred and three" href="/newborn-shoes" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Newborn shoes</span></a></a>
+    </div>
+    
+  </div>
+
+    <div class="dws-menu5">
+    <div class="dws-menu1Col">
+        <a class="a" id="one hundred and four" href="/accessories-and-baby-carriers2" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Accessories and Baby carriers</span></a>
+        <a class="a" id="one hundred and five" href="/trousers-and-shorts5" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Trousers and Shorts</span></a>
+        <a class="a" id="one hundred and six" href="/dresses2" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Dresses</span></a>
+        <a class="a" id="one hundred and seven" href="/topwear-and-beachwear1" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Topwear and Beachwear</span></a>
+        <a class="a" id="one hundred and eight" href="/newborn-shoes2" data-image="https://i.imgur.com/yjlZjzM.jpg"><span class="myText"id="myText1">Newborn shoes</span></a></a>
+    </div>
+   </div> 
+
+<div class="png-container" style="display:flex;width: 38vw;height: 100vh; justify-content: center;align-items: center;">
+
+    
+        <img src="" style="width: 100%; height: 100%; object-fit: cover;">
+      
+ </div> 
+
+     </div> 
+   </div> 
+ </div> 
+     </div> 
+
+ </div> 
+
+
+
+
+
+
+
+<div class="nameShop">
+   <h2 class="myText">Accessories</h2>
+</div> 
+
+
+<div class="container1">
+
+
+
+    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>
+      <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2>
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2>
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+   <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2>
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2>
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2>
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2>
+    </div>
+    <h2>€1.450</h2>
+  </div>    <div class="item1">
+    <a href="/inspection"><img src="https://i.imgur.com/yjlZjzM.jpg">
+
+    <div class="price">
+    <h2><p class="myText">information</p></h2> 
+    </div>
+    <h2>€1.450</h2>
+  </div>
+
+
+
+</div>
+<script src="menu.js"></script>
+
+<script src="href.js">
+
+</script>
+<script src="translate.js">  
+</script>
+<script src="search.js"></script>
+</body> 
+</html>
